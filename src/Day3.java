@@ -89,7 +89,7 @@ public class Day3 {
 		int mostCommon = Integer.compare(ones.size(), zeros.size());
 		
 		if (ratingBit == 1) {
-			if (mostCommon == 1 || mostCommon == 0) {
+			if (mostCommon >= 0) {
 				return calcRatings(ones, ratingBit, ++pos);
 			}
 			else {
@@ -97,7 +97,7 @@ public class Day3 {
 			}
 		}
 		else {
-			if (mostCommon == 1 || mostCommon == 0) {
+			if (mostCommon >= 0) {
 				return calcRatings(zeros, ratingBit, ++pos);
 			}
 			else {
