@@ -87,14 +87,14 @@ public class Day5 {
 		int overlapping = 0;
 			
 		for (Map.Entry<Integer, PriorityQueue<Integer>> entry : points.entrySet()) {
-			PriorityQueue<Integer> pq = entry.getValue();
+			PriorityQueue<Integer> yValues = entry.getValue();
 			
-			Integer curr = pq.poll();
+			Integer curr = yValues.poll();
 			Integer next = null;
 			boolean hasOccured = false;
 			
-			while (!pq.isEmpty()) { 
-				next = pq.poll();
+			while (!yValues.isEmpty()) { 
+				next = yValues.poll();
 				
 				if (curr.equals(next) && !hasOccured) {
 					hasOccured = true;
